@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -33,7 +31,7 @@ public class Main {
             System.out.println("O programa foi finalizado");
             keyboard.close();
         } catch (Exception e) {
-            System.out.println(e);
+            
 
         } finally {
         }

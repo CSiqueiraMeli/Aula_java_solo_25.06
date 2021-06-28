@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,13 +45,13 @@ public class Aula_2406_Manha {
 		System.out.print("Insira o numero final: ");
 		
 		int comando = keyboard.nextInt();
-		System.out.println("Os pares ate " + comando + "são:");
+		System.out.println("Os pares ate " + comando + " são:");
 	
 		for (int i = 1; i <= comando; i++) {
 			if (i % 2 == 0)
 				System.out.println(i);
 		}
-		System.out.println();
+
 	}
 
 	public static void Exercicio2(Scanner keyboard) throws InterruptedException, IOException{
@@ -156,6 +154,7 @@ public class Aula_2406_Manha {
 			count++;
 		}
 	}
+
 }
 
 

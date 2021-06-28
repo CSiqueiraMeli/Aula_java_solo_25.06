@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 public class Usuario {
     private String nome;
     private int cpf;
@@ -26,7 +24,6 @@ public class Usuario {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return "Usuario: " + getNome()
         + "\nDocumento: " + getCpf();
     }

@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 public class Conta_Corente {
     private Usuario usuario;
     private int conta;
@@ -80,7 +78,6 @@ public class Conta_Corente {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return getUsuario()
         + "\nAgencia: " + getAgencia()
         + "\nConta: " + getConta()

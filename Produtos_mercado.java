@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 public class Produtos_mercado {
     private String nome;
     private double valor;
@@ -37,7 +35,6 @@ public class Produtos_mercado {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return "\nProduto " + getCodigo() +
         "\n" + getNome() +
         "\nR$ " + getValor() +

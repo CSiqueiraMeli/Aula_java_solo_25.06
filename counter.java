@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 public class counter {
     private int contador = 0;
 
@@ -29,7 +27,6 @@ public class counter {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return "A contagem esta em: " + getContador();
     }
 }

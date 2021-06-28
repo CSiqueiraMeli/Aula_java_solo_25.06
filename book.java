@@ -1,5 +1,3 @@
-package Exercicios_java;
-
 public class book {
     private String nome;
     private String autor;
@@ -66,7 +64,6 @@ public class book {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return "\nLivro: " + getNome() + "\nAutor: " + getAutor() + "\nISBN: " + getIsbn() + "\nStatus: " + livroDisponivel();
     }
 
