@@ -16,8 +16,9 @@ public class Aula_2406_Manha {
 		while(exercicio != 6){
 			System.out.println();
 			System.out.println("Java - Aula 3 - Exercicio 1");
-			System.out.println("Selecione o exercicio\n1 - Primeiros numeros Pares\n2 - Mutiplos\n3 - Verificar se o numero é primo");
+			System.out.println("1 - Primeiros numeros Pares\n2 - Mutiplos\n3 - Verificar se o numero é primo");
 			System.out.println("4 - Numeros primos seguidos\n5 - Lista de numeros naturais\n6 - Voltar para o menu anterior");
+			System.out.print("Selecione o exercicio: ");
 			exercicio = keyboard.nextInt();
 			if(exercicio == 1){
 				Exercicio1(keyboard); 
