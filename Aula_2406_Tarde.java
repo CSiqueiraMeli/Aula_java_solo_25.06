@@ -15,13 +15,13 @@ public class Aula_2406_Tarde {
             Runtime.getRuntime().exec("clear");
 
         int exercicio = 5;
-        while (exercicio != 6) {
+        while (exercicio != 0) {
             System.out.println();
             System.out.println("Java - Aula 3 - Exercicio 2");
             System.out.println("1 - Array em ordem crescente e decrescente");
             System.out.println("2 - Valores das startups");
             System.out.println("3 - Prototipo de Supermercado");
-            System.out.println("4 - Voltar para o menu anterior");
+            System.out.println("0 - Voltar para o menu anterior");
             System.out.print("Selecione o exercicio: ");
             exercicio = keyboard.nextInt();
             if(exercicio == 1){
@@ -100,11 +100,11 @@ public class Aula_2406_Tarde {
 		System.out.println("Exercicio 3\n\nPrograma supermercado\n");
         List<Produtos_mercado> produtos = new ArrayList<Produtos_mercado>();
         int comando = 5;
-        while(comando != 4){
+        while(comando != 0){
             System.out.println("1 - adicione um item");
             System.out.println("2 - Inserir produtos genericos");
             System.out.println("3 - Imprima a lista");
-            System.out.println("4 - Para voltar");
+            System.out.println("0 - Para voltar");
             comando = keyboard.nextInt();
             
     

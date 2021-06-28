@@ -1,6 +1,8 @@
 package Exercicios_java;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Aula_2506_classes {
@@ -14,12 +16,18 @@ public class Aula_2506_classes {
             System.out.println();
             System.out.println("Java - Aula 3 - Exercicio 1");
             System.out.println("1 - Classe conta corrente");
+            System.out.println("2 - Classe Counter");
+            System.out.println("3 - Classe book");
             System.out.println("0 - Voltar para o menu anterior");
             System.out.print("Selecione o exercicio: ");
             exercicio = keyboard.nextInt();
-            if (exercicio == 1) {
+            if (exercicio == 1)
                 Exercicio1();
-            }
+            if (exercicio == 2)
+                Exercicio2(keyboard);
+                if(exercicio == 3)
+                Exercicio3(keyboard);
+
         }
     }
 
@@ -50,7 +58,7 @@ public class Aula_2506_classes {
     }
 
     public static void Exercicio2(Scanner keyboard) {
-        System.out.println("Exercicio 2 - Classe Ccounter");
+        System.out.println("Exercicio 2 - Classe Counter");
         counter counter = new counter(0);
         int comando = 5;
         while (comando != 0) {
@@ -67,6 +75,73 @@ public class Aula_2506_classes {
                 counter.diminuiContagem();
             if (comando == 3)
                 counter.resetaContagem();
+        }
+    }
+
+    public static void Exercicio3(Scanner keyboard) {
+        System.out.println("Exercicio 3 - Classe Book\n");
+        int comando = 5;
+        int comando2 = 5;
+        List<book> books = new ArrayList<book>();
+        book book1 = new book("A divina Comédia", "Dante Alighieri", 525467);
+        book book2 = new book("A revolucao dos bichos", "George Orwell", 675234765);
+        book book3 = new book("Senhor dos aneis - A sociedade do anel", "J. R. R. Tolkien", 23423566);
+        books.add(book1);
+        books.add(book2);
+        books.add(book3);
+        while (comando2 != 0) {
+            System.out.println();
+            System.out.println("1 - Livro disponíveis");
+            System.out.println("2 - Devolver um livro");
+            System.out.println("3 - Emprestar um livro");
+            System.out.println("4 - adicionar um livro");
+            System.out.println("0 - Voltar");
+            comando = keyboard.nextInt();
+
+            if (comando == 1) {
+                for (book book : books) {
+                    System.out.println(book);
+                }
+            }
+            if (comando == 2) {
+                int numero = 1;
+                System.out.println("\nDEVOLUCAO");
+                for (book book : books) {
+                    System.out.println(numero + " - " + book.getNome()+ " - " + book.livroDisponivel());
+                    numero++;
+                }
+                System.out.print("Qual livro ira devolver?");
+                comando = keyboard.nextInt();
+                if ((comando -1 ) < books.size() && (comando - 1 ) >= 0 && books.get((comando - 1)).getEmprestado() == true)
+                    books.get((comando - 1)).devolver();
+                else
+                    System.out.println("Livro indisponível");
+            }
+            if (comando == 3) {
+                int numero = 1;
+                System.out.println("\nEMPRESTIMO");
+                for (book book : books) {
+                    System.out.println(numero + " - " + book.getNome());
+                    numero++;
+                }
+                System.out.print("Qual livro ira pegar emprestado?");
+                comando = keyboard.nextInt();
+                if ((comando - 1) < books.size() && (comando - 1) >= 0 && books.get((comando -1)).getEmprestado() == false)
+                    books.get((comando - 1)).emprestimo();
+                else
+                    System.out.println("Livro indisponível");
+            }
+            if(comando == 4){
+                System.out.println("\nAdicionar um livro");
+                System.out.print("Nome do livro: ");
+                String nome = keyboard.next();
+                System.out.print("\nNome do Autor: ");
+                String autor = keyboard.next();
+                System.out.print("\nISBN(apenas numeros): ");
+                int isbn = keyboard.nextInt();
+                book book = new book(nome, autor, isbn);
+                books.add(book);
+            }
         }
     }
 }
