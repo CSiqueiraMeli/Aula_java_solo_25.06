@@ -16,6 +16,7 @@ public class Aula_2506_classes {
             System.out.println("1 - Classe conta corrente");
             System.out.println("2 - Classe Counter");
             System.out.println("3 - Classe book");
+            System.out.println("4 - Classe fracao");
             System.out.println("0 - Voltar para o menu anterior");
             System.out.print("Selecione o exercicio: ");
             exercicio = keyboard.nextInt();
@@ -23,8 +24,10 @@ public class Aula_2506_classes {
                 Exercicio1();
             if (exercicio == 2)
                 Exercicio2(keyboard);
-                if(exercicio == 3)
+            if (exercicio == 3)
                 Exercicio3(keyboard);
+            if (exercicio == 4)
+                Exercicio4(keyboard);
 
         }
     }
@@ -105,12 +108,13 @@ public class Aula_2506_classes {
                 int numero = 1;
                 System.out.println("\nDEVOLUCAO");
                 for (book book : books) {
-                    System.out.println(numero + " - " + book.getNome()+ " - " + book.livroDisponivel());
+                    System.out.println(numero + " - " + book.getNome() + " - " + book.livroDisponivel());
                     numero++;
                 }
                 System.out.print("Qual livro ira devolver?");
                 comando = keyboard.nextInt();
-                if ((comando -1 ) < books.size() && (comando - 1 ) >= 0 && books.get((comando - 1)).getEmprestado() == true)
+                if ((comando - 1) < books.size() && (comando - 1) >= 0
+                        && books.get((comando - 1)).getEmprestado() == true)
                     books.get((comando - 1)).devolver();
                 else
                     System.out.println("Livro indisponível");
@@ -124,12 +128,13 @@ public class Aula_2506_classes {
                 }
                 System.out.print("Qual livro ira pegar emprestado?");
                 comando = keyboard.nextInt();
-                if ((comando - 1) < books.size() && (comando - 1) >= 0 && books.get((comando -1)).getEmprestado() == false)
+                if ((comando - 1) < books.size() && (comando - 1) >= 0
+                        && books.get((comando - 1)).getEmprestado() == false)
                     books.get((comando - 1)).emprestimo();
                 else
                     System.out.println("Livro indisponível");
             }
-            if(comando == 4){
+            if (comando == 4) {
                 System.out.println("\nAdicionar um livro");
                 System.out.print("Nome do livro: ");
                 String nome = keyboard.next();
@@ -141,5 +146,65 @@ public class Aula_2506_classes {
                 books.add(book);
             }
         }
+    }
+
+    public static void Exercicio4(Scanner keyboard) {
+        int comando = 5;
+        while (comando != 0) {
+        System.out.println("Exercicio 4 - Classe Fracoes\n");
+        System.out.println("1 - somar duas fracoes\n");
+        System.out.println("2 - subtrair duas fracoes\n");
+        System.out.println("3 - dividir duas fracoes\n");
+        System.out.println("4 - multiplicar duas fracoes\n");
+        System.out.println("0 - voltar\n");
+        comando = keyboard.nextInt();
+        if (comando == 1) {
+            System.out.print("Insira a primeira fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao1 = pegaFracao(keyboard);
+            System.out.print("Insira a segunda fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao2 = pegaFracao(keyboard);
+            fracao1.soma(fracao2);
+        }
+        if (comando == 2) {
+            System.out.print("Insira a primeira fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao1 = pegaFracao(keyboard);
+            System.out.print("Insira a segunda fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao2 = pegaFracao(keyboard);
+            fracao1.subtracao(fracao2);
+        }
+        if (comando == 3) {
+            System.out.print("Insira a primeira fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao1 = pegaFracao(keyboard);
+            System.out.print("Insira a segunda fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao2 = pegaFracao(keyboard);
+            fracao1.divisao(fracao2);
+        }
+        if (comando == 4) {
+            System.out.print("Insira a primeira fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao1 = pegaFracao(keyboard);
+            System.out.print("Insira a segunda fracao(ex. 1/4) ou inteiro: ");
+            Fracao fracao2 = pegaFracao(keyboard);
+            fracao1.multiplicacao(fracao2);
+        }
+    }
+
+    }
+
+    public static Fracao pegaFracao(Scanner keyboard) {
+        String f = keyboard.next();
+        if(!f.contains("/")) {
+            int inteiro = Integer.parseInt(f);
+            Fracao fracao = new Fracao(inteiro, 1);
+            return fracao;
+        }
+
+        else {
+            String[] f1 = f.split("/");
+            int numerador1 = Integer.parseInt(f1[0]);
+            int numerador2 = Integer.parseInt(f1[1]);
+            Fracao fracao = new Fracao(numerador1, numerador2);
+            return fracao;
+        }
+
     }
 }
