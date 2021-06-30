@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) throws InterruptedException, IOException {
         try {
@@ -22,16 +23,15 @@ public class Main {
 
                 exercicio = keyboard.nextInt();
                 if (exercicio == 1)
-                    Aula_2406_Manha.Painel(keyboard);
+                    Aula3_Exercicio1.Painel(keyboard);
                 if (exercicio == 2)
-                    Aula_2406_Tarde.Painel(keyboard);
+                    Aula3_Exercicio2.Painel(keyboard);
                 if (exercicio == 3)
-                    Aula_2506_classes.Painel(keyboard);
+                    Aula4_Exercicio2.Painel(keyboard);
             }
             System.out.println("O programa foi finalizado");
             keyboard.close();
         } catch (Exception e) {
-            
 
         } finally {
         }
