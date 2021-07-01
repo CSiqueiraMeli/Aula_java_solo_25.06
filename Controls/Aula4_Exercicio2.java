@@ -1,5 +1,8 @@
+import classes.Conta_Corente;
+import classes.Fracao;
+import classes.counter;
+
 import java.io.IOException;
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -208,5 +211,13 @@ public class Aula4_Exercicio2 {
             return fracao;
         }
 
+    }
+
+    public static void Exercicio5(Scanner keyboard){
+        int comando = 1;
+        while(comando != 0){
+        System.out.println("Classe pronta porem necessita arrumar esta interface");
+        System.out.println("0 - para voltar");
+        comando = keyboard.nextInt();}
     }
 }
