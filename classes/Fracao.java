@@ -1,3 +1,5 @@
+package classes;
+
 public class Fracao {
     private int numerador, dividendo;
 

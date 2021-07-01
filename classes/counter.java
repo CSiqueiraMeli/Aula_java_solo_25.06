@@ -1,3 +1,5 @@
+package classes;
+
 public class counter {
     private int contador = 0;
 

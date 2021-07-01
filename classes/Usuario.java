@@ -1,3 +1,5 @@
+package classes;
+
 public class Usuario {
     private String nome;
     private int cpf;
@@ -24,7 +26,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario: " + getNome()
+        return "classes.Usuario: " + getNome()
         + "\nDocumento: " + getCpf();
     }
 

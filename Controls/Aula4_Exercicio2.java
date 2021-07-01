@@ -1,6 +1,6 @@
-import classes.Conta_Corente;
-import classes.Fracao;
-import classes.counter;
+package Controls;
+
+import classes.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,9 +19,9 @@ public class Aula4_Exercicio2 {
             System.out.println("Java - Aula 3 - Exercicio 1");
             System.out.println("1 - Classe conta corrente");
             System.out.println("2 - Classe Counter");
-            System.out.println("3 - Classe book");
+            System.out.println("3 - Classe classes.book");
             System.out.println("4 - Classe fracao");
-            System.out.println("5 - Classe Data");
+            System.out.println("5 - Classe classes.Data");
             System.out.println("0 - Voltar para o menu anterior");
             System.out.print("Selecione o exercicio: ");
             exercicio = keyboard.nextInt();

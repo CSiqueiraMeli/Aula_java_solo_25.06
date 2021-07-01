@@ -1,3 +1,5 @@
+package classes;
+
 public class Conta_Corente {
     private Usuario usuario;
     private int conta;

@@ -1,10 +1,12 @@
+package classes;
+
 public class Produtos_mercado {
     private String nome;
     private double valor;
     private int quantidade;
     private int codigo;
 
-    //public Produtos_mercado() {
+    //public classes.Produtos_mercado() {
     //}
 
     public Produtos_mercado(int codigo, String nome, double valor, int quantidade) {

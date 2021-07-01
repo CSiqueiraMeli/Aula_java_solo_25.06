@@ -1,3 +1,7 @@
+import Controls.Aula3_Exercicio1;
+import Controls.Aula3_Exercicio2;
+import Controls.Aula4_Exercicio2;
+
 import java.io.IOException;
 import java.util.Scanner;
 
