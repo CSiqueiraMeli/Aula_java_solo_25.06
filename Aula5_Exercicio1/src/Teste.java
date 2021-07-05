@@ -2,7 +2,7 @@ public class Teste {
 
     public static void main(String[] args){
         Pessoa[] pessoas = {
-                new Pessoa("Pedo", "156975080"),
+                new Pessoa("Pedro", "156975080"),
                 new Pessoa("Afonso", "956545649"),
                 new Pessoa("Cleberson", "765805406"),
                 new Pessoa("Juliana", "276749760"),
